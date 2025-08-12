@@ -30,7 +30,7 @@ export default function Dashboard() {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    const ws = new WebSocket(`ws://127.0.0.1:8000/ws/news/?token=${token}`);
+    const ws = new WebSocket(`ws://13.60.168.27:8000/ws/news/?token=${token}`);
 
     ws.onopen = () => {
       console.log('WebSocket connected');
@@ -60,7 +60,7 @@ export default function Dashboard() {
   const handleGenerateNews = async () => {
     setLoading(true);
     try {
-      await instance.post('http://127.0.0.1:8000/api/v1/news/generate/');
+      await instance.post('http://13.60.168.27:8000/api/v1/news/generate/');
       alert('News successfully created!');
     } catch (error) {
       console.error('Error generating news:', error.response?.data || error.message);

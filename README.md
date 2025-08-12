@@ -1,71 +1,40 @@
-# Getting Started with Create React App
+📡 Real-Time Web Service with Django, PostgreSQL, WebSockets, Redis & React
+This project is for real time display a list of recently added news
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+⚙️ Tech Stack
+Backend:
+Python & Django – Core web framework and API handling
 
-## Available Scripts
+PostgreSQL – Relational database for structured data
 
-In the project directory, you can run:
+WebSockets (Daphne) – Real-time communication protocol
 
-### `npm start`
+Redis – Pub/Sub layer for pushing real-time data to WebSockets
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Frontend:
+HTML / CSS / JavaScript
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React – Component-based frontend UI library
 
-### `npm test`
+Note !!! The frontend was a learning journey! I'm not a frontend developer, but I tackled this challenge with help from GPT and managed to build a functional interface despite facing significant issues along the way.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔄 Real-Time Functionality
+Real-time data updates using WebSockets.
 
-### `npm run build`
+Used Redis for Pub/Sub broadcasts events to connected clients
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend Setup
+create .env file and add private credentials I sent privately on telegram
+run commands below:
+    docker compose build
+    docker compose up
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run migrations
+    docker compose run web python manage.py migrate
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend Setup
+    npm install
+    npm start
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# frontend
+Noteee !
+This project was a valuable learning experience, especially on the frontend side. Although I’m not a frontend expert, I pushed through and implemented the UI with help from GPT where needed. It was tough, but rewarding — and I learned a lot in the process.
